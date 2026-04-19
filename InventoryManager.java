@@ -1,11 +1,12 @@
 import java.util.Scanner;
 import java.util.Stack;
 
-public class InventoryManager<T> {
+public class InventoryManager<T extends Product> {
     public static Stack<String> operationHistory;
 
+    public static Scanner sc = new Scanner(System.in);
+
     public static void menu() {
-        Scanner sc = new Scanner(System.in);
         int choice;
         while (true) {
             System.out.println("***** INVENTORY MANAGEMENT SYSTEM ****");
@@ -26,14 +27,20 @@ public class InventoryManager<T> {
 
             switch (choice) {
                 case 1:
+                    addProduct();
                     break;
                 case 2:
+                    removeProduct();
                     break;
                 case 3:
+                    updateProduct();
+
                     break;
                 case 4: 
+                    searchProduct();
                     break;
                 case 5: 
+                    displayProducts();
                     break;
                 case 0:
                     sc.close();
@@ -42,6 +49,27 @@ public class InventoryManager<T> {
                     System.out.println("Invalid choice.");
             }
         }
+
+    }
+
+    public static void addProduct() {
+
+
+    }
+
+    public static void removeProduct() {
+
+    }
+
+    public static void updateProduct() {
+
+    }
+
+    public static void searchProduct() {
+
+    }
+
+    public static void displayProducts() {
 
     }
 
