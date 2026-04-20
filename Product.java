@@ -22,4 +22,16 @@ public class Product {
         quantity = productQuantity;
         price = productPrice;
     }
+
+    public Product(Product product) {
+        id = product.id;
+        name = product.name;
+        quantity = product.quantity;
+        price = product.price;
+    }
+
+    @Override
+    public String toString(){
+        return "Product(" + id + "," + name + "," +  quantity + "," + price + ")";
+    }
 }
